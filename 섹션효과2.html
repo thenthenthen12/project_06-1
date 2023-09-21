@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url('css/reset.css');
+        section{
+            width: 1920px;
+            height: 100vh;
+            margin: 100px auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: beige;
+        }
+        section div{
+            width: 400px;
+            height: 500px;
+            background-color: #333;
+            margin: 0 20px;
+            transition: 2s;
+        }
+        section div:nth-child(2){
+            width: 400px;
+            height: 700px;
+            background-color: #333;
+            margin: 0 20px;
+        }
+        section .left.on{
+            height: 700px;
+            top: 0;
+            opacity: 1;
+        }
+        section .right.on{
+            height: 700px;
+            top: 0;
+            opacity: 1;
+        }
+        section .left{
+            position: relative;
+            top: -500px;
+            opacity: 0;
+        }
+        section .right{
+            position: relative;
+            top: 500px;
+            opacity: 0;
+        }
+
+    </style>
+    <script src="lib/jquery-3.7.0.min.js"></script>
+    <script>
+        $(function(){
+            $(window).scroll(function(){
+                let height = $(window).scrollTop();
+                let cont02Top = $('.cont_02').offset().top; 
+                let cont03Top = $('.cont_03').offset().top;
+                console.log(height)
+                console.log(cont02Top)
+                console.log(cont03Top)
+
+                $('.cont_02 .left').removeClass('on')
+                $('.cont_02 .right').removeClass('on')
+                if(cont02Top - 300 < height){
+                    $('.cont_02 .left').addClass('on')
+                    $('.cont_02 .right').addClass('on')
+                  
+                }
+                // if(cont03Top > height){
+                //     $('.cont_02 .left').removeClass('on')
+                //     $('.cont_02 .right').removeClass('on')
+                // }                
+            })
+        })
+    </script>
+</head>
+<body>
+    <section></section>
+    <section class="cont_02">
+        <div class="left">카드1</div>
+        <div>카드2</div>
+        <div class="right">카드3</div>
+    </section>
+    <section class="cont_03"></section>
+    <section></section>
+</body>
+</html>

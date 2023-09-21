@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url(css/reset.css);
+        section{
+            width: 1920px;
+            height: 100vh;
+            margin: 100px auto;
+            background-color: #333;
+            color: #fff;
+            font-size: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: 1s;
+            position: relative;
+        }
+        section:nth-child(2) .inner{
+            height: 0;
+            background-color: beige;
+            width: 1440px;
+            margin: 0 auto;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transition: 1s;
+            transform: translate(-50%, -50%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+        }
+        section:nth-child(2) .inner.on{
+            height: 100vh;
+            color: #333;
+        }
+    </style>
+    <script src="lib/jquery-3.7.0.min.js"></script>
+    <script>
+        $(function(){
+            $(window).scroll(function(){
+                $('.cont_02 .inner').removeClass('on')
+                if($(window).scrollTop() >= $('.cont_02').offset().top - 300 ){
+                    $('.cont_02 .inner').addClass('on')
+                }
+            })
+        })
+    </script>
+</head>
+<body>
+    <section>
+        섹션1
+    </section>
+    <section class="cont_02">
+        <div class="inner">
+            <span>섹션2</span>
+        </div>
+    </section>
+    
+</body>
+</html>

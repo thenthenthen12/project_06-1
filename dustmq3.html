@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="lib/jquery-3.7.0.min.js"></script>
+    <style>
+        @import url('css/reset.css');
+        .more{
+            display: none;
+        }
+        .more.on{
+            display: block;
+        }
+        p{
+            cursor: pointer;
+            width: 50px;
+            height: 50px;
+        }
+    </style>
+    <script>
+        $(function(){
+            let i = 1;
+
+            $('.cl').click(function(){
+
+                if(i < $('.more').length){
+                    $('.more').eq(i).addClass('on')
+                    i++;
+                }
+                else{
+                    i = $('.more').length
+                }
+            })
+
+        })
+    </script>
+    
+</head>
+<body>
+    <button class="cl">zzmfflr</button>
+    <div class="box">
+        <div class="more on">
+            <span>121123</span>
+            <span>121123</span>
+            <span>121123</span>
+            <span>121123</span>
+        </div>
+        <div class="more">
+            <span>121123</span>
+            <span>121123</span>
+            <span>121123</span>
+            <span>121123</span>
+        </div>
+        <div class="more">
+            <span>121123</span>
+            <span>121123</span>
+            <span>121123</span>
+            <span>121123</span>
+        </div>
+        <div class="more">
+            <span>121123</span>
+            <span>121123</span>
+            <span>121123</span>
+            <span>121123</span>
+        </div>
+        <div class="more">
+            <span>121123</span>
+            <span>121123</span>
+            <span>121123</span>
+            <span>121123</span>
+        </div>
+        <div class="more">
+            <span>121123</span>
+            <span>121123</span>
+            <span>121123</span>
+            <span>121123</span>
+        </div>
+        <div class="more">
+            <span>121123</span>
+            <span>121123</span>
+            <span>121123</span>
+            <span>121123</span>
+        </div>
+
+    </div><!-- .box end -->
+</body>
+</html>

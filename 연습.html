@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .wrap{
+            width: 1920px;
+            height: 100vh;
+            overflow: hidden;
+            background-color: #333;
+            position: relative;
+        }
+        .inner{
+            position: absolute;
+            height: 100%;
+            top: 50%;
+            right: 0;
+            transform: translate(-50%, -50%);
+        }
+        .box{
+            width: 200px;
+            height: 250px;
+            position: relative;
+            
+        }
+        .box:nth-child(1){
+            background-color: red;
+            animation: circle1 5s infinite linear normal;
+        }
+        .box:nth-child(2){
+            background-color: green;
+            top: 100px;
+            left: -350px;
+        }
+        .box:nth-child(3){
+            background-color: yellow;
+            top: 200px;
+        }
+        .box:nth-child(4){
+            background-color: #fff;
+            right: -350px;
+        }
+
+        @keyframes circle1{
+            0%{
+                transform: translate(0 , 0);
+            }
+            25%{
+                transform: translate(-350px , 200px);
+            }
+
+        }
+        
+
+
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="inner">
+            <div class="box">
+            </div>
+            <div class="box">
+            </div>
+            <div class="box">
+            </div>
+            <div class="box">
+            </div>
+        </div>
+    </div>
+</body>
+</html>

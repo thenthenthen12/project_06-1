@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        section{
+            width: 1920px;
+            height: 100vh;
+            margin-bottom: 100px;
+            background-color: bisque;
+        }
+        div{
+            width: 1920px;
+            height: 100vh;
+            background-color: black;
+            color: #fff;
+        }
+        div span{
+            position: relative;
+            opacity: 0;
+            transition: 1s;
+            display: inline-block;
+            margin: 100px 0;
+            font-size: 60px;
+        }
+        div span:nth-child(1){
+            top: 50px;
+        }
+        div span:nth-child(2){
+            top: -50px;
+        }
+        div span:nth-child(3){
+            top: 50px;
+        }
+        div span:nth-child(4){
+            top: -50px;
+        }
+        div span:nth-child(5){
+            top: 50px;
+        }
+        div span:nth-child(6){
+            top: -50px;
+        }
+        div span:nth-child(7){
+            top: 50px;
+        }
+        div span:nth-child(8){
+            left: 100px;
+        }
+        div:hover span:nth-child(1){
+            transform: translate(0, -50px);
+            opacity: 1;
+        }
+        div:hover span:nth-child(2){
+            transform: translate(0, 50px);
+            opacity: 1;
+        }
+        div:hover span:nth-child(3){
+            transform: translate(0, -50px);
+            opacity: 1;
+        }
+        div:hover span:nth-child(4){
+            transform: translate(0, 50px);
+            opacity: 1;
+        }
+        div:hover span:nth-child(5){
+            transform: translate(0, -50px);
+            opacity: 1;
+
+        }
+        div:hover span:nth-child(6){
+            transform: translate(0, 50px);
+            opacity: 1;
+        }
+        div:hover span:nth-child(7){
+            transform: translate(0, -50px);
+            opacity: 1;
+        }
+        div:hover span:nth-child(8){
+            transform: translate(-100px, 0);
+            opacity: 1;
+        }
+
+    </style>
+</head>
+<body>
+    <section>
+        메인비주얼
+    </section>
+    <div>
+        <span>영</span>
+        <span>감</span>
+        <span>을</span>
+        <span>채</span>
+        <span>워</span>
+        <span>주</span>
+        <span>는</span>
+        <span>CULTURE</span>
+    </div>
+</body>
+</html>
